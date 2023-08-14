@@ -1,0 +1,65 @@
+{% load static %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+     <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/x.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'i.css' %}">
+
+    <title>Movie</title>
+
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+     <a class="navbar-brand" href="#">
+    ABCD BANK
+  </a>
+  <a class="navbar-brand" href="{% url 'bank:login' %}">
+    Login
+  </a>
+
+    <a class="navbar-brand" href="{% url 'bank:register' %}">
+    Register
+  </a>
+  <div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+    Branches
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ernakulam">Ernakulam</a></li>
+    <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Palakkad">Palakkad</a></li>
+    <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Wayanad_district">Wayanad</a></li>
+      <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kozhikode">Kozhikode</a></li>
+      <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Idukki_district">Idukki</a></li>
+  </ul>
+</div>
+    <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</nav>
+{% block body %}
+
+</body>
+{% endblock %}
+
+</html>

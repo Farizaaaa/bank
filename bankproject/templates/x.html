@@ -1,0 +1,22 @@
+
+
+{% extends 'f.html' %}
+{% block body %}
+<br>
+
+{% load static %}
+<div class="col-lg-2">
+<div ><img style="height:500px;width:1230px;" src="{% static 'etienne-martin-2_K82gx9Uk8-unsplash.jpg' %}" alt=""></div>
+<h2 style="position: absolute;
+  top: 10%;
+  left: 300%;">
+    {% if user.is_authenticated %}
+    Hello {{user.username}}
+    <a class="btn  btn-success" href="{% url 'bank:form' %}">Click Here to Complete Registration</a>
+    {% endif %}</h2>
+</div>
+
+<br><br><br>
+{% endblock %}
+<!--</body>-->
+<!--</html>-->
